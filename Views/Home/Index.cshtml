@@ -1,0 +1,21 @@
+﻿@model IEnumerable<GoogleGmailAPI.App.Controllers.MyInbox>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div><b>Mail Box</b><br /></div>
+<table class="table table-bordered table-responsive table-hover">
+    <tr> 
+        <th>From </th>
+        <th>Subject </th>
+        <th>Date </th>
+    </tr>
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.From</td>
+            <td>@d.Subject</td>
+            <td>@d.Date</td>
+        </tr>
+    }
+</table>  
